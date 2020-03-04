@@ -8,7 +8,9 @@ import {Linking, ScrollView} from 'react-native';
 import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
 import {Row, Col} from 'react-native-easy-grid';
 import {View, Text, Avatar, Title} from 'react-native-paper';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5Pro';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
+Icon.loadFont();
 
 function CustomDrawerContent(props) {
   const [avatar, setAvatar] = useState(
@@ -36,12 +38,12 @@ function CustomDrawerContent(props) {
         <DrawerItemList {...props} />
       </DrawerContentScrollView>
       {/* <View> */}
-      <Row style={{}}>
+      <Row style={{justifyContent: 'center', alignItems: 'center'}}>
         <Col style={{width: 'auto'}}>
-          <FontAwesome5 name="sign-out" size={25} color="red" />
+          <Icon name="arrow-forward" size={35} color="grey" />
         </Col>
         <Col style={{marginLeft: 10}}>
-          <Text>Sign out</Text>
+          <Text style={{fontSize: 25, color: 'grey'}}>Sign out</Text>
         </Col>
       </Row>
       {/* </View> */}

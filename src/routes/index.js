@@ -17,7 +17,7 @@ const AppRouter = () => (
       <Drawer.Screen
         name="Detail"
         // component={HomeScreen}
-        options={{title: 'jyoit'}}>
+        options={{title: 'Dashboard'}}>
         {() => <HomeStack />}
       </Drawer.Screen>
     </Drawer.Navigator>
