@@ -4,6 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {View, Text} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
+import AppRouter from './src/routes';
 
 function HomeScreen() {
   return (
@@ -24,15 +25,16 @@ const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Detail">
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen
-          name="Detail"
-          component={DetailsScreen}
-          options={{title: 'jyoit'}}
-        />
-      </Drawer.Navigator>
-    </NavigationContainer>
+    // <NavigationContainer>
+    //   <Drawer.Navigator initialRouteName="Detail">
+    //     <Drawer.Screen name="Home" component={HomeScreen} />
+    //     <Drawer.Screen
+    //       name="Detail"
+    //       component={DetailsScreen}
+    //       options={{title: 'jyoit'}}
+    //     />
+    //   </Drawer.Navigator>
+    // </NavigationContainer>
+    <AppRouter />
   );
 }
