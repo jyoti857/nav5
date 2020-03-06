@@ -16,6 +16,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* nav5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* nav5Tests.m */; };
+		3B5C7B0F24116CB300301860 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C7B0E24116CB300301860 /* File.swift */; };
 		5D9909D8877CE7242DB83EB2 /* libPods-nav5-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F57EB267D654A571CA9A4943 /* libPods-nav5-tvOSTests.a */; };
 		60DB199CCF5CDB43E1CE94F9 /* libPods-nav5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6154FEB2C4C72C644E68BF33 /* libPods-nav5.a */; };
 		836C0CCFC235913850E909C1 /* libPods-nav5-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD224F401C423C6E6D5D040 /* libPods-nav5-tvOS.a */; };
@@ -57,6 +58,8 @@
 		2D02E47B1E0B4A5D006451C7 /* nav5-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nav5-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* nav5-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "nav5-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3380879DCDC9B012E09378C2 /* Pods-nav5-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nav5-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-nav5-tvOS/Pods-nav5-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		3B5C7B0D24116CB200301860 /* nav5-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "nav5-Bridging-Header.h"; sourceTree = "<group>"; };
+		3B5C7B0E24116CB300301860 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		4B57C85C4E35EDBF7FA1626C /* Pods-nav5-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nav5-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-nav5-tvOSTests/Pods-nav5-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		51517F3296655065125FC0E2 /* Pods-nav5.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nav5.release.xcconfig"; path = "Target Support Files/Pods-nav5/Pods-nav5.release.xcconfig"; sourceTree = "<group>"; };
 		6154FEB2C4C72C644E68BF33 /* libPods-nav5.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nav5.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,12 +162,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				3B5C7B0E24116CB300301860 /* File.swift */,
 				13B07FAE1A68108700A75B9A /* nav5 */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* nav5Tests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				9ECFCB06C62ACF50C73B1C07 /* Pods */,
+				3B5C7B0D24116CB200301860 /* nav5-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -194,7 +199,6 @@
 				005A356B204681355AF40BA2 /* Pods-nav5Tests.debug.xcconfig */,
 				D1DF02BC9132A613DC662A4E /* Pods-nav5Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -293,6 +297,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1110;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -309,6 +316,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -578,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				3B5C7B0F24116CB300301860 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 005A356B204681355AF40BA2 /* Pods-nav5Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -654,6 +664,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D1DF02BC9132A613DC662A4E /* Pods-nav5Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = nav5Tests/Info.plist;
@@ -674,7 +685,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C8E692A1E8850D65C6CA3A61 /* Pods-nav5.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = nav5/Info.plist;
@@ -686,6 +699,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = nav5;
+				SWIFT_OBJC_BRIDGING_HEADER = "nav5-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -694,7 +710,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51517F3296655065125FC0E2 /* Pods-nav5.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = nav5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -705,6 +723,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = nav5;
+				SWIFT_OBJC_BRIDGING_HEADER = "nav5-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
