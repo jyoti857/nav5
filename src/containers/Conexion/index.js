@@ -3,9 +3,10 @@ import {INDIVIDUAL, ORGANIZATION} from './constants';
 import {useStatusBarConfiguration} from '../../globalhooks';
 import * as Animatable from 'react-native-animatable';
 import {withTheme, IconButton, Colors} from 'react-native-paper';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5Pro';
+import FontAwesome5 from 'react-native-vector-icons/MaterialIcons';
 import {DynamicModuleLoader} from 'redux-dynamic-modules';
 import {View, Text} from 'react-native';
+import PrimaryScreen from './PrimaryScreen';
 
 const ConexionScreen = props => {
   const [title, setTitle] = useState(INDIVIDUAL);
@@ -32,7 +33,7 @@ const ConexionScreen = props => {
         <IconButton
           icon={() => (
             <FontAwesome5
-              name="building"
+              name="ac-unit"
               size={20}
               color={selected === ORGANIZATION ? Colors.yellow600 : 'white'}
               //   solid={selected === ORGANIZATION}
@@ -47,7 +48,7 @@ const ConexionScreen = props => {
     headerLeft: () => (
       // !isTablet ?
       <IconButton
-        icon={() => <FontAwesome5 name="bars" size={20} color="white" />}
+        icon={() => <FontAwesome5 name="add-box" size={20} color="white" />}
         color="white"
         size={30}
         onPress={() => navigation.openDrawer()}
@@ -61,6 +62,7 @@ const ConexionScreen = props => {
     // </DynamicModuleLoader>
     <View>
       <Text>Hi this is the new conexion String</Text>
+      <PrimaryScreen />
     </View>
   );
 };

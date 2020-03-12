@@ -5,6 +5,9 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import {View, Text} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import AppRouter from './src/routes';
+import Login from './src/containers/Login/components/Login';
+import {Provider} from 'react-redux';
+import store, {loginStore_} from './src/configureStore';
 
 function HomeScreen() {
   return (
@@ -35,6 +38,8 @@ export default function App() {
     //     />
     //   </Drawer.Navigator>
     // </NavigationContainer>
-    <AppRouter />
+    <Provider store={loginStore_}>
+      <Login />
+    </Provider>
   );
 }
