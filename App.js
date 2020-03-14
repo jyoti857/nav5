@@ -7,7 +7,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import AppRouter from './src/routes';
 import Login from './src/containers/Login/components/Login';
 import {Provider} from 'react-redux';
-import store, {loginStore_} from './src/configureStore';
+import {loginStore_} from './src/configureStore';
 
 function HomeScreen() {
   return (

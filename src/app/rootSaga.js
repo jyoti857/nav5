@@ -7,6 +7,7 @@ import {ERROR, INFO} from '../../src/utils/constants';
 import {setToastMessage, setToastVisibility, setUserData} from './rootActions';
 
 import {GET_USER_DATA, SAVE_JS_ERROR_SERVER} from './rootActions';
+import {GET_ACCESS_TOKEN} from '../containers/Login/constants';
 
 function* getUserDataAPI() {
   const requestURL = `${config.apiURL}GetUserProfile`;
@@ -38,5 +39,6 @@ const getUserData = () =>
 
 export default function* initRootSaga() {
   yield takeLatest(GET_USER_DATA, getUserDataAPI);
+  // yield takeLatest(GET_ACCESS_TOKEN, getUserDataAPI); // delete it
   //   yield takeLatest()
 }

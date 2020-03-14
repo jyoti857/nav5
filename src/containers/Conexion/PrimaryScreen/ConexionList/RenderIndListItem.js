@@ -82,7 +82,7 @@ const RenderIndListItem = props => {
           // style={ListCardStyle.root}
         >
           <Card.Title
-            title={<Subheading>{item.DisplayName.trim()}</Subheading>}
+            title={<Subheading>{item.DisplayName.trim()} and jyoti</Subheading>}
             subtitle={getIndSubDetails(item)}
             left={leftProps => (
               <ImageBackground

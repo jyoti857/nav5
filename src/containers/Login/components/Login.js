@@ -36,6 +36,7 @@ const Login = props => {
   const [loaderMessage] = React.useState('isdj');
   const [fadeValue] = React.useState('');
   const {accessToken, getUserAccessTone} = props;
+  console.log('access token ===>', accessToken);
 
   //   React.useEffect(() => {
   //     Animated.sequence([
@@ -60,13 +61,7 @@ const Login = props => {
 
   const handleUserLogin = (userName, password) => {
     console.log('getUserAccessTone props --->', getUserAccessTone);
-    console.log(
-      'from handleUserLogin Login --->',
-      userName,
-      'pasword: ',
-      password,
-    );
-    getUserAccessTone(userName, password);
+    getUserAccessTone({userName, password});
     // dispatch({type: GET_ACCESS_TOKEN, userName, password});
   };
 
@@ -93,21 +88,20 @@ const Login = props => {
     // </LinearGradient>
   );
 };
-
-const mapDispatchToProps = dispatch => ({
-  getUserAccessTone: (userName, password) =>
-    dispatch(getAccessToken(userName, password)),
-  setLoaderState: value => dispatch(setLoaderValue(value)),
-  setLoginAccessTokenDispatch: value => dispatch(setAccessToken(value)),
-  setRootAccessTokenDispatch: message => dispatch(setToastMessage(message)),
-  setToastVisibilityDispatch: value => dispatch(setToastVisibility(value)),
-});
-
 const mapStateToProps = createStructuredSelector({
   accessToken: selectRootAccessToken(),
   loaderState: selectGlobalLoader(),
   toastVisible: selectToastVisibility(),
   toast: selectToastData(),
+});
+
+const mapDispatchToProps = dispatch => ({
+  getUserAccessTone: ({userName, password}) =>
+    dispatch(getAccessToken(userName, password)),
+  setLoaderState: value => dispatch(setLoaderValue(value)),
+  setLoginAccessTokenDispatch: value => dispatch(setAccessToken(value)),
+  setRootAccessTokenDispatch: message => dispatch(setToastMessage(message)),
+  setToastVisibilityDispatch: value => dispatch(setToastVisibility(value)),
 });
 
 const withConnect = connect(

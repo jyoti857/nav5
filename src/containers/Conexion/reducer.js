@@ -24,7 +24,7 @@ import {
   SAVE_LOADER_TEXT_VALUE,
   SET_CONEXION_LOCAL_LOADER,
   SET_EDIT_CONEXION,
-} from '../constants';
+} from './constants';
 export const conexionInitialState = {
   individualConexions: [],
   organizationConexions: [],

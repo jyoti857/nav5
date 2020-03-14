@@ -7,6 +7,7 @@ import FontAwesome5 from 'react-native-vector-icons/MaterialIcons';
 import {DynamicModuleLoader} from 'redux-dynamic-modules';
 import {View, Text} from 'react-native';
 import PrimaryScreen from './PrimaryScreen';
+import {getConexionModule} from './module';
 
 const ConexionScreen = props => {
   const [title, setTitle] = useState(INDIVIDUAL);
@@ -57,13 +58,13 @@ const ConexionScreen = props => {
     //   : null,
   });
   return (
-    // <DynamicModuleLoader modules={[getConexionModule()]}>
-    //   <Conexion selected={selected} setTabChange={setTabChange} />
-    // </DynamicModuleLoader>
-    <View>
-      <Text>Hi this is the new conexion String</Text>
-      <PrimaryScreen />
-    </View>
+    <DynamicModuleLoader modules={[getConexionModule()]}>
+      <PrimaryScreen selected={selected} setTabChange={setTabChange} />
+    </DynamicModuleLoader>
+    // <View>
+    //   <Text>Hi this is the new conexion String</Text>
+    //   <PrimaryScreen />
+    // </View>
   );
 };
 

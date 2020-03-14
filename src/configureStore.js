@@ -2,10 +2,11 @@
 import {createStore} from 'redux-dynamic-modules';
 
 import {getSagaExtension} from 'redux-dynamic-modules-saga';
-import {compose, combineReducers, createStore as createLoginStore} from 'redux';
+import {compose, combineReducers} from 'redux';
 import {getRootModule} from './app/module';
 import loginStore from './containers/Login/reducer';
 import {reducer as formReducer} from 'redux-form';
+import {getLoginModule} from './containers/Login/module';
 const addPromiseSupportToDispatch = store => {
   const rawDispatch = store.dispatch;
   return action => {
@@ -32,5 +33,11 @@ const configLoginReducers = combineReducers({
 });
 
 // export {configLoginReducers};
-const loginStore_ = createLoginStore(configLoginReducers);
+// const loginStore_ = createStore(configLoginReducers);
+const loginStore_ = createStore(
+  {},
+  [compose()],
+  [getSagaExtension()],
+  getRootModule(),
+);
 export {loginStore_};

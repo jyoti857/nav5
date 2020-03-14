@@ -94,12 +94,11 @@ class ConexionList extends PureComponent {
     throw new Error('I Crashed!');
   };
   getRenderPart = () => {
-    const {indSelected, onPressItem} = this.props;
+    const {indSelected, onPressItem, conexionListData} = this.props;
     console.log(
       'render getRenderPart function  --> conexionListData --->',
       conexionListData,
     );
-    const {conexionListData} = this.props;
     if (indSelected) {
       return (
         <FlatList
@@ -113,7 +112,7 @@ class ConexionList extends PureComponent {
           )}
           keyExtractor={item => item.ConexionId.toString()}
           ListEmptyComponent={this.renderListEmpty}
-          //   onRefresh={this.handleIndListRefresh}
+          // onRefresh={this.handleIndListRefresh}
           onEndReached={this.handleLoadMoreIndList}
           onEndReachedThreshold={0.01}
           getItemLayout={(data, index) => ({

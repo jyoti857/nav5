@@ -8,7 +8,7 @@ import SplashScreen from 'react-native-splash-screen';
 // import Store from '../co'
 import StoreWrappedApp from './components/StoreWrappedApp';
 import {paperTheme as themes} from '../theme/react-native-paper';
-import Store from '../configureStore';
+import store, {loginStore_} from '../configureStore';
 
 const Device = require('react-native-device-detection');
 
@@ -29,7 +29,7 @@ const App = () => {
   return (
     <SafeAreaProvider>
       <PaperProvider theme={paperTheme}>
-        <Provider store={Store}>
+        <Provider store={store}>
           <StoreWrappedApp />
         </Provider>
       </PaperProvider>

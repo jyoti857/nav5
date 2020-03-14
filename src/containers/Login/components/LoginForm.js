@@ -15,8 +15,8 @@ const LoginForm = props => {
     const valuesForm = JSON.stringify(values, null, 2);
     const objectForm = JSON.parse(valuesForm);
     // Keyboard.dismiss();
-    console.log('from _handleUserLogin --->', valuesForm);
-    alert(valuesForm);
+    console.log('from _handleUserLogin --->', objectForm);
+    // alert(valuesForm);
     onLogin(objectForm.loginemail, objectForm.loginpassword);
   };
   return (
@@ -28,18 +28,20 @@ const LoginForm = props => {
         component={PasswordInput}
         required
       />
-      <TouchableRipple
+      {/* <TouchableRipple
         rippleColor="rgba(0, 0, 0, .32)"
         style={styles.buttonContainer}
         onPress={handleSubmit(_handleUserLogin)}
         // disabled={pristine || submitting || invalid}
-      >
-        <Button
-        // icon={() => <FontAwesome name="store" color="#fff" size={16} />}
-        >
-          Login
-        </Button>
-      </TouchableRipple>
+      > */}
+      <Button
+        icon={() => <FontAwesome name="store" color="#fff" size={20} />}
+        mode="contained"
+        onPress={handleSubmit(_handleUserLogin)}
+        color="#2630a7">
+        Login
+      </Button>
+      {/* </TouchableRipple> */}
     </View>
   );
 };
@@ -71,4 +73,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default compose(reduxLoginForm)(LoginForm);
+export default reduxLoginForm(LoginForm);

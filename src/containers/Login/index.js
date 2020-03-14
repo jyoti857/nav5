@@ -1,5 +1,5 @@
 import React from 'react';
-import {DynamicModulesLoader} from 'redux-dynamic-modules';
+import {DynamicModuleLoader} from 'redux-dynamic-modules';
 
 // import {StatusBar} from 'react-native';
 import Login from './components/Login';
@@ -8,9 +8,9 @@ import {View} from 'react-native';
 const LoginScreen = () => {
   return (
     // <View>
-    <DynamicModulesLoader modules={[getLoginModule()]}>
+    <DynamicModuleLoader modules={[getLoginModule()]}>
       <Login />
-    </DynamicModulesLoader>
+    </DynamicModuleLoader>
   );
 };
 
